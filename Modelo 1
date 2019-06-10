@@ -1,0 +1,103 @@
+<style>
+    .obs {
+        text-align: right;
+        align-content: left !important;
+        color: rgb(41, 40, 40);
+        font: bold 18px Helvetica, Arial, Sans-Serif;
+        text-shadow: 1px 1px #02a2fe, 1px 1px #d7dbdd, 3px 3px #d7dbdd;
+        -webkit-transition: all 0.12s ease-out;
+        -moz-transition: all 0.10s ease-out;
+        -o-transition: all 0.10s ease-out;
+        cursor: pointer;
+        margin: 0px 8px -10px 0px;
+    }
+    
+    .obs:hover {
+        text-shadow: 1px 1px #d7dbdd, 1px 1px #02a2fe, 3px 3px #d7dbdd;
+        -webkit-transition: all 0.12s ease-out;
+        -moz-transition: all 0.10s ease-out;
+        -o-transition: all 0.10s ease-out;
+    }
+    
+    .cabecalho {
+        BACKGROUND-COLOR: rgb(64, 128, 191);
+        WIDTH: 100%;
+        height: 70px;
+        FONT-FAMILY: OpenSansLight, sans-serif;
+        margin: none;
+    }
+    
+    table {
+        WIDTH: 100%;
+    }
+    
+    .alinImg {
+        color: #ffffff;
+        text-align: left;
+        font-size: 14px;
+        WIDTH: 10px;
+        content: none;
+    }
+    
+    .alinEsq {
+        color: #ffffff;
+        text-align: left;
+        font-size: 12px;
+        border: none;
+        padding: 15px 0px 0px 5px !important;
+    }
+    
+    .alinCent {
+        font-size: 2.5em;
+        FONT-FAMILY: OpenSansLight, sans-serif;
+        COLOR: #ffffc0;
+        font-stretch: normal"
+
+    }
+    
+    .alinDir {
+        text-align: right;
+        font-size: 14px;
+        padding: 0px 20px 0px 50px;
+        color: #ffffff;
+    }
+    
+    img {
+        width: 50px;
+        padding: 8px 0px 0px 5px;
+    }
+    
+    p {
+        margin-top: 2px !important;
+        margin-bottom: 0px !important;
+    }
+    
+    .quadro {
+        margin: none;
+        padding: none;
+    }
+
+</style>
+<div class="quadro">
+    <div class="cabecalho">
+        <table>
+            <tr>
+                <td class="alinImg">
+                    <img src="15c60f3c4f6b468d8aaba6d5e4764abc.png">
+                </td>
+                <td class="alinEsq" style="content: unset">
+                    <b>DITEC/UEC2/GECIN/PR/E61-REQUISITOS</b>
+                </td>
+                <td class="alinCent">Concluído</td>
+                <td class="alinDir" id="hora">
+                    <b>#interna</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div class="obs">
+            <p>R$ milhões</p>
+        </div>
+    </div>
+</div>
