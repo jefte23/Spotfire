@@ -1,0 +1,162 @@
+<style>
+    .cards-list {
+        z-index: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        margin: 30px auto;
+        width: 200px;
+        height: 100px;
+        border-radius: 20px;
+        box-shadow: 4px 4px 10px 6px rgba(0, 0, 0, 0.15), -5px -5px 20px 7px rgba(202, 202, 202, 0.1);
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    
+    .card .card_image {
+        width: inherit;
+        height: inherit;
+        background: rgba(167, 168, 168, 0.795);
+        border-radius: 20px;
+    }
+    
+    .card .card_image img {
+        width: inherit;
+        height: inherit;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    
+    .card .card_title {
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: -80px;
+        line-height: 10px;
+        color: #000 !important;
+    }
+    
+    .card:hover {
+        transform: scale(1.1, 1.1);
+        box-shadow: 3px 3px 16px 10px rgba(0, 0, 0, 0.20), -3px -3px 16px 10px rgba(0, 0, 0, 0.10);
+    }
+    
+    @media all and (max-width: 180px) {
+        .card-list {
+            /* On small screens, we are no longer using row direction but column */
+            flex-direction: column;
+        }
+    }
+</style>
+
+<div class="cards-list">
+    <div class="Liberação">
+
+        <div class="card 1">
+            <div class="card_image"> </div>
+            <div class="card_title title-white" onclick="changePageLiberacao();">
+                <div id="wrapperliberacao" style="display:none">
+                    <SpotfireControl id="7383d6c6e1344bc7adab0b6f46830ea9" />
+                </div>
+                <span>Liberação</span></br>
+                </br>
+                </br>
+                <span><SpotfireControl id="a6d60747356f4994bb5d07f2e9059a34" /></br></span></br>
+                <span><SpotfireControl id="c1962ad225b44923b210e4ea7450b927" /></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card 1">
+        <div class="card_image"> </div>
+        <div class="card_title title-white">
+            <span>Processos</span></br>
+            </br>
+            </br>
+            <span><SpotfireControl id="c88c609d8bb744288c77f02c7e364ca1" /></span></br>
+            </br>
+            <span><SpotfireControl id="6678abffb42c4b52ad432fe61650cc03" /></span>
+        </div>
+    </div>
+
+    <div class="card 1">
+        <div class="card_image"> </div>
+        <div class="card_title title-white">
+            <span>Margem</span><br><br><br>
+            <span><SpotfireControl id="612a9853f3804eb582f61cc63a7ebc11" /></span></br>
+            </br>
+            <span><SpotfireControl id="23582511617a47cebad963baf9a00dfa" /></span>
+        </div>
+    </div>
+
+    <div class="card 1">
+        <div class="card_image"> </div>
+        <div class="card_title title-white">
+            <span>Total</span><br><br><br>
+            <span><SpotfireControl id="d923bff535154f08ac228b6ca9842403" /></span></br>
+            </br>
+            <span><SpotfireControl id="e544cc2ddc1548b2996a27a03a22d54d" /></span></br>
+            </br>
+        </div>
+    </div>
+</div>
+</br>
+
+<div class="filtro" style="text-align:center; color:black;">
+    <label><b>Data: </b></label>
+    <SpotfireControl id="f424eb7c1b7f4bd7a2c1e80babcb7809" />
+</div>
+
+<!--<div id=tile1 style="display:none;">-->
+<div id='qtdLib' style="display:none;">
+    <SpotfireControl id="b4f49be066014ea290a7da491d69afc8" />
+</div>
+
+<script type="text/javascript">
+    
+    document.getElementById('Naoexib').style.display = "inline";
+    document.getElementById('exib').style.display = "none";
+
+
+    function minhaFuncao() {
+        var qtdLib = document.getElementById('qtdLib');
+        var Lib = parseInt(qtdLib.innerText, 10);
+        console.log(Lib);
+
+        if (Lib > 0) {
+            document.getElementById('Naoexib').style.display = "none";
+            document.getElementById('exib').style.display = "inline";
+        } else {
+            document.getElementById('Naoexib').style.display = "inline";
+            document.getElementById('exib').style.display = "none";
+        }
+    }
+
+
+    var timer = setInterval(minhaFuncao, 5000);
+
+    function changePageLiberacao() {
+
+        var qtdLib = document.getElementById('qtdLib');
+        var Lib = parseInt(qtdLib.innerText, 10);
+
+        if (Lib > 0) {
+
+            var aux = $("#wrapperliberacao > input").first().val();
+            //alert(aux)
+            if (aux === "0") {
+                var elem = document.getElementById("wrapperliberacao");
+                $("#wrapperliberacao input").val(1).blur();
+            } else {
+                var elem = document.getElementById("wrapperliberacao");
+                $("#wrapperliberacao input").val(0).blur();
+            }
+        }
+    }
+</script>
